@@ -12,4 +12,6 @@
   - react-dom: 18.2.0
 
 -BE
-  - Spring or Node.js 미정
+  - Java 11
+  - Spring 3.1.4
+  - mysql 8.0
