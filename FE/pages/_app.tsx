@@ -1,8 +1,16 @@
 import React from "react";
-import '../styles/globals.css'
+import { BrowserRouter } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
+import "../styles/globals.css";
+
+const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps}   />
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Component {...pageProps} />
+    </QueryClientProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
