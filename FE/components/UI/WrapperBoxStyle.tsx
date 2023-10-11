@@ -6,6 +6,7 @@ const WrapperBoxStyle = styled.div`
   max-width: 500px;
   width: 100%;
   height: 844px;
+  justify-content: center;
   background-color: #f3f1e0;
   background-repeat: no-repeat;
   border-radius: 10px;

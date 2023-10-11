@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 interface Props {
   label: string;
   icon?: ReactNode;
-  styleOverrides;
+  styleOverrides?;
 }
 
 const DefaultButton = ({

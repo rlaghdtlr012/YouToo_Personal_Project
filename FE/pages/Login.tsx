@@ -1,6 +1,10 @@
-import ValidationInput from "@/components/UI/Input";
+import ValidationInput from "../components/UI/Input";
+import { ValidationErrorTextStyle } from "../components/UI/InputStyle";
+import { SubmitHandler, useForm } from "react-hook-form";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import { emailRegEx } from "../utils/regex";
+import DefaultButton from "../components/UI/Button";
 
 const MainCharacter = styled.div`
   display: flex;
@@ -30,14 +34,15 @@ interface FormInput {
 }
 
 const Login = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isDirty },
+  } = useForm<FormInput>({ mode: "onChange" });
   return (
     <>
-      <MainCharacter>
-        <TitleImg
-          src={process.env.PUBLIC_URL + "/assets/images/common-title.png"}
-        />
-      </MainCharacter>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      {/* <form onSubmit={handleSubmit("temp")}> */}
+      <form>
         <ValidationInput
           register={register("userEmail", {
             required: "이메일을 입력해 주세요.",
