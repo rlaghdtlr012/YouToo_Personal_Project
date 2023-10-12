@@ -3,6 +3,7 @@ import { ValidationErrorTextStyle } from "../components/UI/InputStyle";
 import { SubmitHandler, useForm } from "react-hook-form";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import { localLogin } from "../api/login";
 import { emailRegEx } from "../utils/regex";
 import DefaultButton from "../components/UI/Button";
 
@@ -39,10 +40,19 @@ const Login = () => {
     handleSubmit,
     formState: { errors, isDirty },
   } = useForm<FormInput>({ mode: "onChange" });
+
+  const onSubmit = async formData => {
+    try {
+      const response = await localLogin(formData);
+      console.log(response.data);
+    } catch (error) {
+      console.error("로그인 실패:", error);
+    }
+  };
+
   return (
     <>
-      {/* <form onSubmit={handleSubmit("temp")}> */}
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <ValidationInput
           register={register("userEmail", {
             required: "이메일을 입력해 주세요.",
