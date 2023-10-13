@@ -81,11 +81,9 @@ const Login = () => {
         <ValidationErrorTextStyle>
           {errors.userPassword && errors.userPassword.message}
         </ValidationErrorTextStyle>
-        <ValidationErrorTextStyle styleOverrides={loginErrorMessageStyle}>
-          {/* {errors.userEmail || errors.userPassword
-            ? '이메일 또는 비밀번호를 잘못 입력하셨습니다. 입력하신 내용을 다시 확인해 주세요.'
-            : null} */}
-        </ValidationErrorTextStyle>
+        <ValidationErrorTextStyle
+          styleOverrides={loginErrorMessageStyle}
+        ></ValidationErrorTextStyle>
         {!isDirty ? (
           <DefaultButton
             styleOverrides={disabledLoginBtnStyle}
