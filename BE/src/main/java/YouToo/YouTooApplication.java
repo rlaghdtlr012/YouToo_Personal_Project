@@ -1,4 +1,4 @@
-package YouToo.demo;
+package YouToo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
