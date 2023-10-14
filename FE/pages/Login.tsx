@@ -3,7 +3,7 @@ import { ValidationErrorTextStyle } from "../components/UI/InputStyle";
 import { SubmitHandler, useForm } from "react-hook-form";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import { localLogin } from "../api/login";
+import { localLogin } from "../app/api/login";
 import { emailRegEx } from "../utils/regex";
 import DefaultButton from "../components/UI/Button";
 
@@ -44,7 +44,7 @@ const Login = () => {
   const onSubmit = async formData => {
     try {
       const response = await localLogin(formData);
-      console.log(response.data);
+      console.log(response);
     } catch (error) {
       console.error("로그인 실패:", error);
     }

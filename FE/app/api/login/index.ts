@@ -1,7 +1,7 @@
-import axiosBaseURL from "../axios";
+import axiosBaseURL from "../../axios";
 
 export const localLogin = async formData => {
-  const response = await axiosBaseURL.post("/login", {
+  const response = await axiosBaseURL.post("/local-login", {
     userEmail: formData.userEmail,
     userPassword: JSON.stringify(formData.userPassword),
   });
