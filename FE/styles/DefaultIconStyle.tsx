@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled, { CSSProperties } from "styled-components";
 
 const DefaultIconStyle = styled.img<{
-  styleOverrides?;
+  styleOverrides?: CSSProperties;
 }>`
   position: absolute;
   left: 13px;

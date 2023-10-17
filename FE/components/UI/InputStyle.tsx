@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { CSSProperties } from "styled-components";
 
 export const ValidationLabelStyle = styled.label`
   display: block;
@@ -42,7 +42,7 @@ export const ValidationWarningTextStyle = styled.strong`
 `;
 
 export const ValidationErrorTextStyle = styled.div<{
-  styleOverrides?;
+  styleOverrides?: CSSProperties;
 }>`
   color: var(--warning-color);
   font-size: 14px;

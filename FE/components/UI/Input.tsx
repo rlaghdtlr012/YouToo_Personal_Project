@@ -1,3 +1,4 @@
+import { CSSProperties } from "styled-components";
 import { UseFormRegisterReturn } from "react-hook-form";
 import {
   ValidationInputStyle,
@@ -10,7 +11,7 @@ interface Props {
   type?: string;
   label: string;
   placeholder?: string;
-  styleOverrides?;
+  styleOverrides?: CSSProperties;
   asterisk: boolean;
   register?: UseFormRegisterReturn;
 }

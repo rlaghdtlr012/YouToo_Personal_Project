@@ -1,10 +1,11 @@
+import { CSSProperties } from "styled-components";
 import { DefaultButtonStyle } from "./ButtonStyle";
 import { ReactNode } from "react";
 
 interface Props {
   label: string;
   icon?: ReactNode;
-  styleOverrides?;
+  styleOverrides?: CSSProperties;
 }
 
 const DefaultButton = ({

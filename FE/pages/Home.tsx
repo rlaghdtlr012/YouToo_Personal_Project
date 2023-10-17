@@ -26,6 +26,29 @@ const SubTitleText = styled.div`
   margin-top: 15px;
 `;
 
+const FirstEnteredBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  gap: 10px;
+`;
+
+const FirstEnteredText = styled.span`
+  font-size: 16px;
+  color: #444;
+  transition: all 0.3s ease;
+`;
+
+const FirstEnteredButton = styled.button`
+  font-size: 16px;
+  color: var(--main-color);
+  transition: all 0.3s ease;
+  &:hover {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+`;
+
 const ButtonBox = styled.div`
   width: 100%;
   display: flex;
@@ -76,6 +99,16 @@ const Home = () => {
             }}
           />
         </ButtonBox>
+        <FirstEnteredBox>
+          <FirstEnteredText>처음 방문하셨나요?</FirstEnteredText>
+          <FirstEnteredButton
+            onClick={() => {
+              router.push("/Join");
+            }}
+          >
+            회원가입하기
+          </FirstEnteredButton>
+        </FirstEnteredBox>
       </MainDiv>
     </>
   );

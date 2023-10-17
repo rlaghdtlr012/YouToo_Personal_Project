@@ -34,7 +34,7 @@ interface FormInput {
   userPassword: string;
 }
 
-const Login = () => {
+const Join = () => {
   const router = useRouter();
   const {
     register,
@@ -97,4 +97,4 @@ const Login = () => {
     </>
   );
 };
-export default Login;
+export default Join;

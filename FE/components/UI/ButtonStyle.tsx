@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled, { CSSProperties } from "styled-components";
 
 export const DefaultButtonStyle = styled.button<{
-  styleOverrides;
+  styleOverrides?: CSSProperties;
 }>`
   position: relative;
   display: block;
@@ -9,6 +9,6 @@ export const DefaultButtonStyle = styled.button<{
   height: 50px;
   border-radius: 12px;
   font-size: 16px;
-  background-color: var(--main-color);
+  background-color: #e48254;
   ${({ styleOverrides }) => ({ ...styleOverrides })};
 `;
