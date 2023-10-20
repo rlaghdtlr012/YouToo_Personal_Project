@@ -8,3 +8,7 @@ export interface RegisterValues {
   userEmail: string;
   userPassword: string;
 }
+
+export interface KaKaoTokenData {
+  token: string;
+}

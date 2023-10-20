@@ -1,2 +1,7 @@
-package YouToo.Service;public interface LoginService {
+package YouToo.Service;
+
+import YouToo.Member.Member;
+
+public interface LoginService {
+    boolean localLogin(Member member);
 }
