@@ -1,7 +1,7 @@
 import axiosBaseURL from "../../axios";
-import { RegisterValues } from "../type";
+import { LoginFormValues, RegisterValues } from "../type";
 
-export const localLogin = async formData => {
+export const localLogin = async (formData: LoginFormValues) => {
   const response = await axiosBaseURL.post("/local-login", {
     userEmail: formData.userEmail,
     userPassword: formData.userPassword,
