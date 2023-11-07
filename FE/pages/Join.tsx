@@ -59,8 +59,8 @@ const Join = () => {
               message: "이름은 2~3자로 입력해 주세요.",
             },
             maxLength: {
-              value: 5,
-              message: "이름은 2~5자로 입력해 주세요.",
+              value: 6,
+              message: "이름은 2~6자로 입력해 주세요.",
             },
           })}
           label={"이름"}
